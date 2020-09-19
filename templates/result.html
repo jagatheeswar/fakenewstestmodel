@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<style>
+	h2{
+align-content: center;
+	text-align:center;
+	}
+
+</style>
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>fake news detector</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+
+	<body style="color:black;background-color:#fc0303;text-align: center;font-size:30px "> <i class="fa fa-close" aria-hidden="true"></i>the news you entered is fake</body>
+	{% elif prediction == 0%}
+	<body style="color:blue; background-color:#09e60d; text-align: center;font-size:30px">  <i class="fa fa-check" aria-hidden="true"></i>the news you entered is real</body>
+	{% endif %}
+
+	</div>
+
+
+</body>
+</html>
